@@ -10,11 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NInterservice.Client", "src\NInterservice.Client\NInterservice.Client.xproj", "{A838F62F-0759-4B97-B5EF-D8580EBDFDA9}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "NInterservice.Client.Tests", "tests\NInterservice.Client.Tests\NInterservice.Client.Tests.xproj", "{77650329-9A7D-44C9-9E6F-C32F76C5F75E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B6A32AAF-96D5-4839-A7A8-84AD2898EA98}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IocServiceStack.Client", "src\IocServiceStack.Client\IocServiceStack.Client.xproj", "{A838F62F-0759-4B97-B5EF-D8580EBDFDA9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IocServiceStack.Client.Tests", "tests\IocServiceStack.Client.Tests\IocServiceStack.Client.Tests.xproj", "{77650329-9A7D-44C9-9E6F-C32F76C5F75E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NInterservice.Client.Tests
+namespace IocServiceStack.Client.Tests
 {
-    public class Class1
+    public class Customer
     {
-        public Class1()
-        {
-        }
+
     }
 }

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NInterservice.Client.Tests")]
+[assembly: AssemblyProduct("IocServiceStack.Client")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("77650329-9a7d-44c9-9e6f-c32f76c5f75e")]
+[assembly: Guid("a838f62f-0759-4b97-b5ef-d8580ebdfda9")]
