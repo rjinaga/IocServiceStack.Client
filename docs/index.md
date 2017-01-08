@@ -10,7 +10,7 @@ IocServiceStack.Client is a open source .NET library to communicate over HTTP wi
 - .NET Framework 4.6
 
 
-## [NuGet](https://www.nuget.org/packages/IocServiceStack.Gateway/)
+### [NuGet](https://www.nuget.org/packages/IocServiceStack.Gateway/)
 ```
 PM> Install-Package IocServiceStack.Client -Pre
 ```
@@ -27,12 +27,14 @@ using IocServiceStack.Client;
 //Configure remote services
 IocServiceProvider.Configure(config =>
 {
-    config.UseRemoteServices(gatewayBaseUrl : "http://localhost:8080/serviceapi");
+    config.UseRemoteServices(
+	gatewayBaseUrl : 
+		"http://localhost:8080/serviceapi");
 });
 
 ```
 
-## Web N Tier Architecture using IocServiceStack, IocServiceStack.Gateway, IocServiceStack.Client 
+### Web N Tier Architecture using IocServiceStack, IocServiceStack.Gateway, IocServiceStack.Client 
 
 https://github.com/rjinaga/Web-N-Tier-Architecture
 
