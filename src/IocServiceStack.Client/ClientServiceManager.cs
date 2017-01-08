@@ -25,19 +25,19 @@
 
 namespace IocServiceStack.Client
 {
-
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Threading.Tasks;
-
-    internal class HttpIocServiceStackClient
+    public static class ClientServiceManager
     {
-        public void Send()
+        //public  ClientServiceManager 
+        public static T GetService<T>() where T : class
         {
-            HttpClient client = new HttpClient();
-            //client.PostAsync()
+            var provider = ClientIocContainer.IoC.ServiceProvider;
+            return provider.GetService<T>();
+        }
+        public static object GetService(Type contractType)
+        {
+            var provider = ClientIocContainer.IoC.ServiceProvider;
+            return provider.GetService(contractType);
         }
     }
 }

@@ -25,19 +25,13 @@
 
 namespace IocServiceStack.Client
 {
-    public static class ServiceConfigExtensions
+    public class ServiceRequest
     {
-        public static IRootBasicService UseRemoteServices(this IServiceConfig config, string gatewayBaseUrl)
-        {
-            config.RegisterServiceProvider(new ClientServiceProvider(gatewayBaseUrl));
-
-            //Configure isolated IocContainer for this library
-            return ClientIocServiceProvider.Configure(sconfig => sconfig.Services(opt => { })).GetServiceFactory()
-
-            .Add<IServiceProxy>(() => new ClientServiceProxy())
-            .Add<IServiceClient>(() => new ServiceClient())
-            .Add<ISerializer>(() => new JsonSerializer());
-
-        }
+        public string BaseUrl;
+        public string ServiceName;
+        public string Action;
+        public string Namespace;
+        public string Module;
+        public byte[] Content;
     }
 }

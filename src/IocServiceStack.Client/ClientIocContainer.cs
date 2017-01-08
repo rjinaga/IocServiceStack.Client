@@ -23,21 +23,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
+
 namespace IocServiceStack.Client
 {
-    public class ProxyServiceProvider : IServiceProvider
+    internal class ClientIocContainer
     {
-        private System.Uri _gatewayUrl;
-        public ProxyServiceProvider(System.Uri gatewayUrl)
-        {
-            _gatewayUrl = gatewayUrl;
-        }
-
-        public T GetService<T>() where T : class
-        {
-            var proxy = new ServiceProxy<T>();
-            return (T)proxy.GetTransparentProxy();
-        }
+        internal static IocContainer IoC;
     }
-
 }

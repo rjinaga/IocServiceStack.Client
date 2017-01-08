@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "IocServiceStack": "1.0.0-rc-2"
+  },
+
+  "frameworks": {
+    "net46": {}
+  }
+}

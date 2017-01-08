@@ -23,39 +23,34 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-namespace IocServiceStack.Client
+namespace IocServiceStack.Client.Tests
 {
-    using System;
-    using System.Reflection;
-    using System.Runtime.Remoting.Messaging;
-    using System.Runtime.Remoting.Proxies;
-   
-    public class ServiceProxy<T> : RealProxy where T: class
+    using Contracts;
+    using NUnit.Framework;
+    using static ServiceManager;
+
+    public class PerformanceTests
     {
-        public ServiceProxy() : base(typeof(T))
+        [Test]
+        public void Performance_Test()
         {
+            const int onethousand = 1000;
+            for (int i = 0; i < onethousand; i++)
+            {
+                InternalTest();
+            }
         }
-
-        public override IMessage Invoke(IMessage msg)
+        private void InternalTest()
         {
-            var methodCall = msg as IMethodCallMessage;
-            var methodInfo = methodCall.MethodBase as MethodInfo;
+            //Arrange
+            var customer = GetService<ICustomer>();
 
-            //Gateway -> Contract/Action
-            //Json Body 
-            // OnBeforeExecute(methodCall);
-            try
-            {
-                //make a call to server to fetch
-                //var result = methodInfo.Invoke(_contract, methodCall.InArgs);
-                //  OnAfterExecute(methodCall);
-                return new ReturnMessage(null, null, 0, methodCall.LogicalCallContext, methodCall);
-            }
-            catch (Exception ex)
-            {
-                // OnErrorExecute(methodCall);
-                return new ReturnMessage(ex, methodCall);
-            }
+            //Act
+            var result = customer.GetCustomer(23, "RemoteTest");
+
+            //Assert
+            Assert.AreEqual(result.Name, "23RemoteTest");
+
         }
     }
 }
