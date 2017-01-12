@@ -34,9 +34,9 @@ IocServiceProvider.Configure(config =>
 
 ```
 
-### Web N Tier Architecture using IocServiceStack, IocServiceStack.Gateway, IocServiceStack.Client 
+### Web N-Tier Architecture using IocServiceStack, IocServiceStack.Gateway, and IocServiceStack.Client 
 
-https://github.com/rjinaga/Web-N-Tier-Architecture
+[https://github.com/rjinaga/Web-N-Tier-Architecture](https://github.com/rjinaga/Web-N-Tier-Architecture)
 
 
 
