@@ -5,11 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{A8F867E7-4ECA-4B11-A848-8ABA1CD5F709}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3E853F81-CC27-4FBD-914F-EFF5C5CBAC01}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B6A32AAF-96D5-4839-A7A8-84AD2898EA98}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IocServiceStack.Client", "src\IocServiceStack.Client\IocServiceStack.Client.xproj", "{A838F62F-0759-4B97-B5EF-D8580EBDFDA9}"
@@ -17,6 +12,11 @@ EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "IocServiceStack.Client.Tests", "tests\IocServiceStack.Client.Tests\IocServiceStack.Client.Tests.xproj", "{77650329-9A7D-44C9-9E6F-C32F76C5F75E}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Contracts", "tests\Contracts\Contracts.xproj", "{CF9DDFCE-F90B-423D-B2C4-F7288D883E79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A6448ED3-5DEF-4658-8B7B-4493DFA0A5B0}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

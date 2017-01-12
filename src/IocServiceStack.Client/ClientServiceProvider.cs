@@ -25,14 +25,24 @@
 
 namespace IocServiceStack.Client
 {
-    public class ClientServiceProvider : IServiceProvider
+    public class ClientServiceProvider : IocServiceStack.IServiceProvider
     {
+        private IDecoratorManager _decoratorManager;
         private string _gatewayBaseUrl;
+
+        public IDecoratorManager DecoratorManager
+        {
+            set
+            {
+                _decoratorManager = value;
+            }
+        }
+
         public ClientServiceProvider(string gatewayBaseUrl)
         {
             _gatewayBaseUrl = gatewayBaseUrl;
         }
-
+        
         public object GetService(System.Type contractType)
         {
             throw new System.NotImplementedException();
@@ -48,5 +58,6 @@ namespace IocServiceStack.Client
         {
             throw new System.NotImplementedException();
         }
+
     }
 }

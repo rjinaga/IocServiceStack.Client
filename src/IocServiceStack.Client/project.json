@@ -1,25 +1,29 @@
 {
-  "version": "1.0.0-alpha-2",
+  "version": "1.0.0-alpha-3",
 
   "dependencies": {
-    "IocServiceStack": "1.0.0-rc-2",
-    "Newtonsoft.Json": "9.0.1",
-    "System.Net.Http": "4.1.0"
+    "IocServiceStack": "1.0.0-rc-final",
+    "Newtonsoft.Json": "9.0.1"
   },
 
   "frameworks": {
-    "net46": {}
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Net.Http": "4.0.0.0"
+      }
+    }
   },
 
   "scripts": {
     "postcompile": [
-      "dotnet pack --no-build --configuration %compile:Configuration%"
+      "dotnet pack --no-build  --configuration %compile:Configuration%"
     ]
   },
 
+
   "packOptions": {
     "summary": "IocServiceStack.Client is a open source .NET library to communicate over HTTP with IocServiceStack.Gateway. This enables communication to remote services of IocServiceStack.",
-    "tags": [ ".NET", "Dependency Injection", "IoC", "IocServiceStack" ],
+    "tags": [ ".NET", "DependencyInjection", "IoC", "IocServiceStack" ],
     "owners": [ "rjinaga" ],
     "projectUrl": "https://github.com/rjinaga/IocServiceStack.Client"
   }

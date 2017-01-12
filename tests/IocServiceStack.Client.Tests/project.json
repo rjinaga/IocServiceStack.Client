@@ -6,9 +6,9 @@
     "Moq": "4.5.29",
     "NUnit": "3.5.0",
     "dotnet-test-nunit": "3.4.0-beta-3",
-    "IocServiceStack.Client": "1.0.0-*",
+    "IocServiceStack.Client": {"target": "project"},
     "Contracts": "1.0.0-*",
-    "IocServiceStack": "1.0.0-rc-2"
+    "IocServiceStack": "1.0.0-rc-final"
   },
 
   "frameworks": {
