@@ -27,6 +27,7 @@ namespace IocServiceStack.Client.Tests
 {
     using Contracts;
     using NUnit.Framework;
+    using System.Collections.Generic;
     using static ServiceManager;
 
     [TestFixture]
@@ -45,4 +46,15 @@ namespace IocServiceStack.Client.Tests
             Assert.AreEqual(result.Name, "23RemoteTest");
         }
     }
+
+    public class Customer1
+    {
+        public string Name;
+        public bool? IsGold;
+        public Customer1 Customer;
+
+        public IEnumerable<Customer1> Customers;
+
+    }
+
 }

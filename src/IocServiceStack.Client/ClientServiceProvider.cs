@@ -25,6 +25,8 @@
 
 namespace IocServiceStack.Client
 {
+    using System;
+
     public class ClientServiceProvider : IocServiceStack.IServiceProvider
     {
         private IDecoratorManager _decoratorManager;
@@ -35,6 +37,14 @@ namespace IocServiceStack.Client
             set
             {
                 _decoratorManager = value;
+            }
+        }
+
+        public IocContainer IocContainer
+        {
+            set
+            {
+                throw new NotImplementedException();
             }
         }
 
@@ -59,5 +69,9 @@ namespace IocServiceStack.Client
             throw new System.NotImplementedException();
         }
 
+        public IContainerService GetDependencyFactory(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

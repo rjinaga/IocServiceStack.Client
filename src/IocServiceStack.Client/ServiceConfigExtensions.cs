@@ -27,7 +27,7 @@ namespace IocServiceStack.Client
 {
     public static class ServiceConfigExtensions
     {
-        public static IRootBasicService UseRemoteServices(this IServiceConfig config, string gatewayBaseUrl)
+        public static IContainerExtension UseRemoteServices(this IServiceConfig config, string gatewayBaseUrl)
         {
             config.RegisterServiceProvider(new ClientServiceProvider(gatewayBaseUrl));
 
