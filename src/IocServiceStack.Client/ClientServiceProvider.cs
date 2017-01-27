@@ -64,6 +64,17 @@ namespace IocServiceStack.Client
             return (T)proxy.GetTransparentProxy();
         }
 
+        public T GetService<T>(string serviceName) where T : class
+        {
+            var proxy = new InternalServiceProxy<T>(_gatewayBaseUrl, serviceName);
+            return (T)proxy.GetTransparentProxy();
+        }
+
+        public object GetService(Type contractType, string serviceName)
+        {
+            throw new NotImplementedException();
+        }
+
         public IServiceFactory GetServiceFactory()
         {
             throw new System.NotImplementedException();

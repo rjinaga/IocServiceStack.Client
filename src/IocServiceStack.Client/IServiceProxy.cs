@@ -8,6 +8,6 @@
         string BaseUrl { get; set; }
         ISerializer Serializer { get; set; }
         IServiceClient ServiceClient { get; set; }
-        object Invoke(Type contractType, MethodInfo methodInfo, object[] args);
+        object Invoke(Type contractType, string serviceType, MethodInfo methodInfo,  object[] args);
     }
 }

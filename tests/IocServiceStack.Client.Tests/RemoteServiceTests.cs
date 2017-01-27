@@ -40,11 +40,27 @@ namespace IocServiceStack.Client.Tests
             var customer = GetService<ICustomer>();
 
             //Act
+            var result = customer.GetCustomer(233, "1RemoteTest");
+
+            //Assert
+            Assert.AreEqual(result.Name, "2331RemoteTest");
+        }
+
+        [Test]
+        public void RemoteService_Platinum_Test()
+        {
+            //Arrange
+            var customer = GetService<ICustomer>("Platinum");
+
+            //Act
             var result = customer.GetCustomer(23, "RemoteTest");
 
             //Assert
-            Assert.AreEqual(result.Name, "23RemoteTest");
+            Assert.AreEqual(result.Name, "23RemoteTestPlatinum");
         }
+
+        
+
     }
 
     public class Customer1

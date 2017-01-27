@@ -40,6 +40,7 @@ namespace IocServiceStack.Client.Tests
                 InternalTest();
             }
         }
+
         private void InternalTest()
         {
             //Arrange
@@ -50,7 +51,6 @@ namespace IocServiceStack.Client.Tests
 
             //Assert
             Assert.AreEqual(result.Name, "23RemoteTest");
-
         }
     }
 }

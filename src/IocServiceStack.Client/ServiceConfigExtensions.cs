@@ -32,11 +32,11 @@ namespace IocServiceStack.Client
             config.RegisterServiceProvider(new ClientServiceProvider(gatewayBaseUrl));
 
             //Configure isolated IocContainer for the client library
-            return ClientIocServiceProvider.Configure(sconfig => sconfig.Services(opt => { })).GetServiceFactory()
-
-            .Add<IServiceProxy>(() => new ClientServiceProxy())
-            .Add<IServiceClient>(() => new ServiceClient())
-            .Add<ISerializer>(() => new JsonSerializer());
+            return ClientIocServiceProvider.Configure(sconfig => sconfig.AddServices(opt => { }))
+                  .GetServiceFactory()
+                  .Add<IServiceProxy>(() => new ClientServiceProxy())
+                  .Add<IServiceClient>(() => new ServiceClient())
+                  .Add<ISerializer>(() => new JsonSerializer());
         }
     }
 }

@@ -16,7 +16,7 @@
             get; set;
         }
 
-        public object Invoke(Type contractType, MethodInfo methodInfo, object[] args)
+        public object Invoke(Type contractType, string serviceType, MethodInfo methodInfo, object[] args)
         {
             string contractModule = contractType.Assembly.GetName().Name;
             string contractNamespace = contractType.Namespace;
@@ -42,6 +42,7 @@
                     BaseUrl = BaseUrl,
                     ServiceName = contractName,
                     Action = actionName,
+                    ServiceType = serviceType,
                     Namespace = contractNamespace,
                     Module = contractModule,
                     Content = data

@@ -28,8 +28,19 @@ namespace IocServiceStack.Client
     public class ServiceRequest
     {
         public string BaseUrl;
+
+        /// <summary>
+        /// Name of the contract
+        /// </summary>
         public string ServiceName;
+
         public string Action;
+
+        /// <summary>
+        /// Type of the service
+        /// </summary>
+        public string ServiceType;
+
         public string Namespace;
         public string Module;
         public byte[] Content;

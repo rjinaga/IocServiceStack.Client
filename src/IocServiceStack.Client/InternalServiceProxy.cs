@@ -32,11 +32,19 @@ namespace IocServiceStack.Client
 
     internal class InternalServiceProxy<T> : RealProxy where T: class
     {
-        private string _gatewayBaseUrl;
-        
+        private readonly string _gatewayBaseUrl;
+        private readonly string _serviceType;
+
         public InternalServiceProxy(string gatewayBaseUrl) : base(typeof(T))
         {
             _gatewayBaseUrl = gatewayBaseUrl;
+        }
+
+        public InternalServiceProxy(string gatewayBaseUrl, string serviceType) : base(typeof(T))
+        {
+            _gatewayBaseUrl = gatewayBaseUrl;
+            _serviceType = serviceType;
+
         }
 
         public override IMessage Invoke(IMessage msg)
@@ -51,7 +59,7 @@ namespace IocServiceStack.Client
                 proxy.Serializer = ClientServiceManager.GetService<ISerializer>();
                 proxy.BaseUrl = _gatewayBaseUrl;
 
-                var result = proxy.Invoke(methodInfo.ReflectedType, methodInfo, methodCall.Args);
+                var result = proxy.Invoke(methodInfo.ReflectedType, _serviceType, methodInfo,  methodCall.Args);
 
                 return new ReturnMessage(result, null, 0, methodCall.LogicalCallContext, methodCall);
             }

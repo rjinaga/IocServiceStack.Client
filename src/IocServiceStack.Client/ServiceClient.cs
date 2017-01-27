@@ -42,7 +42,7 @@ namespace IocServiceStack.Client
             Verify(request);
 
             var httpRequest = new HttpRequestMessage(HttpMethod.Post,
-                new Uri($"{request.BaseUrl}/{request.ServiceName}/{request.Action}"))
+                new Uri($"{request.BaseUrl}/{request.ServiceName}/{request.Action}/{request.ServiceType}"))
             {
                 Content = new ByteArrayContent(request.Content)
             };
