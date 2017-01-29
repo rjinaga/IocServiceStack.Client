@@ -5,7 +5,7 @@
     {
         public static ServicePostConfiguration Configure(Action<ServiceConfig> configuration)
         {
-            var config = IocServiceProvider.CreateIocContainer(configuration);
+            var config = IocServicelet.CreateIocContainer(configuration);
 
             ClientIocContainer.IoC = config.GetIocContainer();
 

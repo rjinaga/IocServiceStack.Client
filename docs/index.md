@@ -1,6 +1,6 @@
 # IocServiceStack.Client
 
-[![Gitter](https://badges.gitter.im/IocServiceStack/Lobby.svg)](https://gitter.im/IocServiceStack/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Gitter](https://badges.gitter.im/IocServiceStack/Lobby.svg)](https://gitter.im/IocServiceStack/IocServiceStack)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y27lcxxgah666hf9/branch/master?svg=true)](https://ci.appveyor.com/project/rjinaga/iocservicestack-client/branch/master)
 
@@ -27,7 +27,7 @@ PM> Install-Package IocServiceStack.Client -Pre
 using IocServiceStack.Client;
 
 //Configure remote services
-IocServiceProvider.Configure(config =>
+IocServicelet.Configure(config =>
 {
     config.UseRemoteServices(
 	gatewayBaseUrl : 

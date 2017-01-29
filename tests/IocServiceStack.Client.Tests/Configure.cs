@@ -11,7 +11,7 @@
         public void Config()
         {
             //Configure remote services
-            IocServiceProvider.Configure(config =>
+            IocServicelet.Configure(config =>
             {
                 config.UseRemoteServices(gatewayBaseUrl : "http://localhost:63488/serviceapi");
             });

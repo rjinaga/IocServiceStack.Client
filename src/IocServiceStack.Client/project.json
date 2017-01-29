@@ -2,7 +2,7 @@
   "version": "1.0.0-beta-1",
 
   "dependencies": {
-    "IocServiceStack": "1.1.0-beta-3",
+    "IocServiceStack": "1.1.0-rc-final",
     "Newtonsoft.Json": "9.0.1"
   },
 
