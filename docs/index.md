@@ -1,8 +1,6 @@
 # IocServiceStack.Client
 
-[![Gitter](https://badges.gitter.im/IocServiceStack/Lobby.svg)](https://gitter.im/IocServiceStack/IocServiceStack)
-
-[![Build status](https://ci.appveyor.com/api/projects/status/y27lcxxgah666hf9/branch/master?svg=true)](https://ci.appveyor.com/project/rjinaga/iocservicestack-client/branch/master)
+[![Gitter](https://badges.gitter.im/IocServiceStack/Lobby.svg)](https://gitter.im/IocServiceStack/IocServiceStack)  [![Build status](https://ci.appveyor.com/api/projects/status/y27lcxxgah666hf9/branch/master?svg=true)](https://ci.appveyor.com/project/rjinaga/iocservicestack-client/branch/master)
 
 IocServiceStack.Client is a open source .NET library to communicate over HTTP with IocServiceStack.Gateway. This enables communication to remote services of IocServiceStack.
 
